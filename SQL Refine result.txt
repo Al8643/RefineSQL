@@ -1,8 +1,6 @@
 Q1. You want to retrieve a list of employees in alphabetical order of Lastname from the Employees table. Which SQL statement should you use?
 SELECT * FROM Employees SORT BY Lastname;
 
-
-
 SELECT * FROM Employees SORT BY Lastname;
 SELECT * FROM Employees GROUP BY Lastname;
 SELECT * FROM Employees ORDER BY Lastname DESC;
@@ -23,11 +21,11 @@ Correct. HAVING. The keyword HAVING is used to set a condition for a GROUP BY cl
 Q3. You want to retrieve a list of authors from Australia, Canada, and India from the table Authors. Which SQL statement is correct?
 
 SELECT * FROM Author WHERE Country LIST ('CA', 'IN');
-SELECT * FROM Author WHERE Country IN (‘Australia’, 'Canada', 'India');
-SELECT * FROM Author WHERE Country BETWEEN(‘Australia’, ‘Canada’, ‘India’);
-SELECT * FROM Author IF Country (‘Australia’, 'Canada', 'India');
+SELECT * FROM Author WHERE Country IN (â€˜Australiaâ€™, 'Canada', 'India');
+SELECT * FROM Author WHERE Country BETWEEN(â€˜Australiaâ€™, â€˜Canadaâ€™, â€˜Indiaâ€™);
+SELECT * FROM Author IF Country (â€˜Australiaâ€™, 'Canada', 'India');
 
-Correct. SELECT * FROM Author WHERE Country IN (‘Australia’, 'Canada', 'India');
+Correct. SELECT * FROM Author WHERE Country IN (â€˜Australiaâ€™, 'Canada', 'India');
 The IN keyword allows you to specify a list of values to match a condition.
 
 Q4. You want to retrieve a list of books priced above $10 and below $25 from the table Book. What are the two ways you can specify the range?
@@ -38,29 +36,29 @@ SELECT Title, Price FROM Book WHERE Price IN (10, 25);
 SELECT Title, Price FROM Book WHERE Price BETWEEN 10 and 25;
 
 Correct.  SELECT Title, Price FROM Book WHERE Price >= 10 and Price <= 25; SELECT Title, Price FROM Book WHERE Price BETWEEN 10 and 25;
-Specify the price range using BETWEEN … AND …. If you only selected this option. Specify the price range using the >= and <= operands. 
+Specify the price range using BETWEEN â€¦ AND â€¦. If you only selected this option. Specify the price range using the >= and <= operands. 
 
 Q5. You want to retrieve Salary information for an employee called Ed from the Employee table. You write the following statement: 
 
 SELECT Firstname, Lastname, Salary FROM Employees
 
-You see all the employees listed, and it’s hard to find Ed’s information. Which clause should you add to reduce the number of rows returned?
+You see all the employees listed, and itâ€™s hard to find Edâ€™s information. Which clause should you add to reduce the number of rows returned?
 
-GROUP BY Firstname = ‘Ed’;
-WHERE Employees = ‘Ed’;
-WHERE Firstname = ‘Ed’;
+GROUP BY Firstname = â€˜Edâ€™;
+WHERE Employees = â€˜Edâ€™;
+WHERE Firstname = â€˜Edâ€™;
 ORDER BY Firstname;
 
-Correct. WHERE Firstname = ‘Ed’; The WHERE clause restricts the result set, in this case to employees with the first name Ed.
+Correct. WHERE Firstname = â€˜Edâ€™; The WHERE clause restricts the result set, in this case to employees with the first name Ed.
 
-Q6 . You want to select author's last name from a table, but you only remember the author’s last name starts with the letter B, which string pattern can you use? 
+Q6 . You want to select author's last name from a table, but you only remember the authorâ€™s last name starts with the letter B, which string pattern can you use? 
 
-SELECT lastname from author where lastname like ‘B#’ 
-SELECT lastname from author where lastname like ‘B%’ 
-SELECT lastname from author where lastname like ‘B$’ 
+SELECT lastname from author where lastname like â€˜B#â€™ 
+SELECT lastname from author where lastname like â€˜B%â€™ 
+SELECT lastname from author where lastname like â€˜B$â€™ 
 None of the above 
 
-Correct. SELECT lastname from author where lastname like ‘B%’ . You can use the % sign as a wildcard to indicate zero or more missing characters.
+Correct. SELECT lastname from author where lastname like â€˜B%â€™ . You can use the % sign as a wildcard to indicate zero or more missing characters.
 
 Q7. In a SELECT statement, which SQL clause controls how the result set is displayed? 
 
@@ -94,9 +92,10 @@ Q10. You want to retrieve a list of books that have between 450 and 600 pages. W
 SELECT Title, Pages FROM Book ________________________________
 
 WHERE Pages >= 450 and pages <= 600
-WHERE Pages 450 – 600
+WHERE Pages 450 â€“ 600
 IF Pages >= 450 and Pages <= 600
 WHERE Pages = 450
 
 Correct. WHERE Pages >= 450 and pages <= 600.
 You can use operators like >= and <= to define a range of values within a WHERE clause.
+
